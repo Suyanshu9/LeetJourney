@@ -15,10 +15,8 @@ void reverse(ListNode* &head, ListNode* cur,ListNode* prev){
         return ;
     }
     ListNode* forward = cur-> next;
+    reverse(head,forward,cur);
     cur -> next = prev;
-    prev = cur;
-    cur = forward;
-    reverse(head,forward,prev);
 }
 class Solution {
 public:
